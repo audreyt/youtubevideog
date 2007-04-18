@@ -2,7 +2,7 @@
 <Module>
 <ModulePrefs title="Youtube Video Player"
              render_inline="optional"
-             description="This module stores a link to a youtube video so that it can be played from the google personalized homepage. In the future a list may be implemented."             
+             description="This module stores a link to a youtube video so that it can be played from the google personalized homepage. In the future a list may be implemented to store additional video links."             
          screenshot="http://youtubevideog.googlecode.com/svn/trunk/yplayerss.png" 
          thumbnail="http://youtubevideog.googlecode.com/svn/trunk/yplayertn.png"
              author="Wisgary Torres"

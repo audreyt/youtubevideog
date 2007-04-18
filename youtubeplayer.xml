@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs title="Youtube Video Player"
+             render_inline="optional"
+             description="This module stores a link to a youtube video so that it can be played from the google personalized homepage. In the future a list may be implemented."             
+         screenshot="http://img.photobucket.com/albums/v252/Wisgary/ssFlash.png" 
+         thumbnail="http://img.photobucket.com/albums/v252/Wisgary/ssFlashthumb.png"
+             author="Wisgary Torres"
+             author_email="wisgary+gadget@gmail.com"
+             author_affiliation="None"
+             author_location="Bayamon, Puerto Rico"
+             author_photo="http://geocities.com/wisgarytorres/me.jpg"
+             author_aboutme="I am a computer science major in the University of Puerto Rico in Bayamon. My bejeweled gadget and other game gadgets I make are actually made for my girlfriend Sarah, who is a big bejeweled and flash games fan."
+             author_link="http://www.wisgary.com"
+             author_quote="Please stop the University of Puerto Rico Bayamon Campus from giving COBOL classes! -Myself"
+	     height="237"
+             title_url="http://wisgary.com/gadgets"
+/>
+           
+
+	     <UserPref name="vlink" display_name="Youtube video link:" default_value="" datatype="string" />
+
+<Content type="html">
+<![CDATA[ 
+<script type="text/javascript">
+var prefs = new _IG_Prefs(__MODULE_ID__);
+var url = prefs.getString("vlink");
+var vcode = url.substring(url.lastIndexOf("=")+1, url.length)
+var fullStr = '<object width="287" height="237"><param name="movie" value="http://www.youtube.com/v/' + vcode + '"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/' + vcode + '" type="application/x-shockwave-flash" wmode="transparent" width="287" height="237"></embed></object>'
+
+document.write(fullStr);
+</script>
+
+
+]]>
+
+</Content>
+</Module>

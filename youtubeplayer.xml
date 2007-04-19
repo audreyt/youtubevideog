@@ -22,6 +22,10 @@
 
 <Content type="html">
 <![CDATA[ 
+<script>
+     // Track this gadget using Google Analytics.
+     _IG_Analytics("UA-1244640-1", "/youtubeg");
+</script>
 <script type="text/javascript">
 var prefs = new _IG_Prefs(__MODULE_ID__);
 var url = prefs.getString("vlink");

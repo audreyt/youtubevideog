@@ -2,7 +2,7 @@
 <Module>
 <ModulePrefs title="Youtube Video Player"
              render_inline="optional"
-             description="This module stores a link to a youtube video so that it can be played from the google personalized homepage. In the future a list may be implemented."             
+             description="This module stores a link to a youtube video so that it can be played from the google personalized homepage. It also stores a list of videos from which one will be selected and played at random everytime the personalized homepage loads, if the playlist mode is turned on."             
          screenshot="http://img.photobucket.com/albums/v252/Wisgary/ssFlash.png" 
          thumbnail="http://img.photobucket.com/albums/v252/Wisgary/ssFlashthumb.png"
              author="Wisgary Torres"

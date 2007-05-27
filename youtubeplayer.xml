@@ -2,9 +2,9 @@
 <Module>
 <ModulePrefs title="Youtube Video Player"
              render_inline="optional"
-             description="This module stores a link to a youtube video so that it can be played from the google personalized homepage. In the future a list may be implemented to store additional video links."             
-         screenshot="http://youtubevideog.googlecode.com/svn/trunk/yplayerss.png" 
-         thumbnail="http://youtubevideog.googlecode.com/svn/trunk/yplayertn.png"
+             description="This module stores a link to a youtube video so that it can be played from the google personalized homepage. In the future a list may be implemented."             
+         screenshot="http://img.photobucket.com/albums/v252/Wisgary/ssFlash.png" 
+         thumbnail="http://img.photobucket.com/albums/v252/Wisgary/ssFlashthumb.png"
              author="Wisgary Torres"
              author_email="wisgary+gadget@gmail.com"
              author_affiliation="None"
@@ -18,20 +18,31 @@
 />
            
 
-	     <UserPref name="vlink" display_name="Youtube video link:" default_value="" datatype="string" />
+	     <UserPref name="vlink" display_name="Default video link:" default_value="" datatype="string" />
+ 		 <UserPref name="randomness" display_name="Playlist Mode" datatype="bool"/>
+		 <UserPref name="playList" display_name="Add a playlist link:" datatype="list"/> 
+
 
 <Content type="html">
 <![CDATA[ 
-<script>
-     // Track this gadget using Google Analytics.
-     _IG_Analytics("UA-1244640-1", "/youtubeg");
-</script>
 <script type="text/javascript">
 var prefs = new _IG_Prefs(__MODULE_ID__);
-var url = prefs.getString("vlink");
-var vcode = url.substring(url.lastIndexOf("=")+1, url.length)
-var fullStr = '<object width="287" height="237"><param name="movie" value="http://www.youtube.com/v/' + vcode + '"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/' + vcode + '" type="application/x-shockwave-flash" wmode="transparent" width="287" height="237"></embed></object>'
+var videoArray = prefs.getArray("playList");
+var playRand = prefs.getBool("randomness");
+var randVidIndex = Math.floor(Math.random()*videoArray.length);
 
+var url;
+
+if (playRand)
+	url = videoArray[randVidIndex];
+else
+	url = prefs.getString("vlink");
+
+
+var vcode = url.substring(url.indexOf("=")+1, url.indexOf("=")+12);
+
+
+var fullStr = '<object width="287" height="237"><param name="movie" value="http://www.youtube.com/v/' + vcode + '"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/' + vcode + '" type="application/x-shockwave-flash" wmode="transparent" width="287" height="237"></embed></object>'
 document.write(fullStr);
 </script>
 

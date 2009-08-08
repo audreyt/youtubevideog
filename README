@@ -1,0 +1,4 @@
+This is a fork of Wisgary Torres's <http://youtubevideog.googlecode.com/>
+project, to accomodate it with containers that are less than 287 pixels wide.
+
+This software may be distributed by GPL v2; see the LICENSE file for a copy.

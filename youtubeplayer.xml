@@ -42,7 +42,7 @@ else
 var vcode = url.substring(url.indexOf("=")+1, url.indexOf("=")+12);
 
 
-var fullStr = '<object width="287" height="237"><param name="movie" value="http://www.youtube.com/v/' + vcode + '"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/' + vcode + '" type="application/x-shockwave-flash" wmode="transparent" width="287" height="237"></embed></object>'
+var fullStr = '<object width="100%" height="100%"><param name="movie" value="http://www.youtube.com/v/' + vcode + '"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/' + vcode + '" type="application/x-shockwave-flash" wmode="transparent" width="100%" height="100%"></embed></object>'
 document.write(fullStr);
 </script>
 
